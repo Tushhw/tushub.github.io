@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(to bottom, #001f3d, #005d8f);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gameContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#slotGameTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#slotGame {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #007bb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #6c7c8b;
+}
+
+button:hover {
+    background-color: #005f87;
+}
+
+#inputs input {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #007bb5;
+    background-color: #005d8f;
+    color: white;
+}
+
+#balanceDisplay {
+    font-size: 2rem;
+    color: #00ff00;
+    text-shadow: 2px 2px 5px #000000;
+    margin-top: 20px;
+}
+
+#winMessage {
+    font-size: 2rem;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 2px 2px 5px #000000;
+    margin-top: 20px;
+    display: none;
+}
+
+.winMessage {
+    display: block;
+    animation: winAnimation 3s ease-in-out;
+}
+
+@keyframes winAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
